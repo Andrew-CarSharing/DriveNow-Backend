@@ -74,6 +74,8 @@ namespace DriveNow.Controllers
 				}
 			}
 			return Ok("Finished!");
+
+			return Ok();
 		}
 	}
 }
