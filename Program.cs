@@ -1,4 +1,5 @@
-﻿using DriveNow.DBContext;
+﻿using DriveNow.Context;
+using DriveNow.DBContext;
 using Microsoft.EntityFrameworkCore;
 
 internal class Program
@@ -18,6 +19,12 @@ internal class Program
         {
             option.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL"));
         });
+
+        var authOptionConfiguration = builder.Configuration.GetSection("Auth");
+
+        builder.Services.Configure<AuthOptions>(authOptionConfiguration);
+
+        var authOptions = builder.Configuration.GetSection("Auth").Get<AuthOptions>(); 
 
         var app = builder.Build();
 

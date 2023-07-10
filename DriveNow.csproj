@@ -25,11 +25,13 @@
     <None Remove="Context\" />
     <None Remove="DBContext\" />
     <None Remove="Controllers\" />
+    <None Remove="Enum\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Context\" />
     <Folder Include="DBContext\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Enum\" />
   </ItemGroup>
 </Project>
